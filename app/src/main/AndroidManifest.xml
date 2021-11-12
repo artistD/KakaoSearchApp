@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.will_d.tp11kakaoplacesearchapp">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- GPS사용에 대한것 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 인터넷에 대한것 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_dmojang"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_dmojang"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tp11KakaoPlaceSearchApp"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".SplashActivty" android:theme="@style/splashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".PlaceUrlActivity"/>
+
+        <activity android:name=".MainActivity"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDYBpGLF8C0UrvM75ZHgBLhKqM-iS0EW5o"/>
+
+    </application>
+
+</manifest>
