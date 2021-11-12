@@ -2,6 +2,7 @@ package com.will_d.tp11kakaoplacesearchapp
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.security.identity.CipherSuiteNotSupportedException
 import android.view.LayoutInflater
@@ -12,6 +13,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptor
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
@@ -56,7 +59,7 @@ class SearchMapFragment : Fragment() {
                 val position :LatLng = LatLng(latitude, longitude)
 
                 //마커옵션 객체를 통해 마커의 설정들
-                val markerOptions:MarkerOptions = MarkerOptions().position(position).title(place.place_name).snippet(place.distance + "m")
+                val markerOptions:MarkerOptions = MarkerOptions().position(position).title(place.place_name).snippet(place.distance + "m").icon(BitmapDescriptorFactory.defaultMarker(165F))
                 it.addMarker(markerOptions)?.tag = place.place_url
                 
             }

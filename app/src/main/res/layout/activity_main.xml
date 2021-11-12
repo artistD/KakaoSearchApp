@@ -14,22 +14,23 @@
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
+            android:layout_marginRight="8dp"
             android:src="@drawable/ic_logo"
-            android:layout_marginRight="8dp" />
+            app:tint="@color/teal_700" />
 
         <EditText
             android:id="@+id/et_search"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_search_et"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:hint="검색장소 입력"
+            android:background="@drawable/bg_search_et"
             android:gravity="center"
-            android:textSize="12sp"
-            android:textColor="@color/black"
+            android:hint="검색장소 입력"
+            android:imeOptions="actionSearch"
             android:inputType="text"
-            android:imeOptions="actionSearch"/>
+            android:textColor="@color/black"
+            android:textSize="12sp" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -43,7 +44,7 @@
         android:scrollbars="none">
 
         <!--        코드가 여기있는것으로 인지함-->
-        <include layout="@layout/choice_list"/>
+        <include layout="@layout/choice_list" />
 
 
     </HorizontalScrollView>
@@ -53,19 +54,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/scrollview"
-        app:tabIndicatorColor="@color/black"
-        app:tabSelectedTextColor="@color/black"
+        app:tabIndicatorColor="@color/teal_700"
+        app:tabSelectedTextColor="@color/teal_700"
         app:tabTextColor="#FFAAAAAA">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LIST"/>
+            android:text="LIST" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MAP"/>
+            android:text="MAP" />
 
 
     </com.google.android.material.tabs.TabLayout>

@@ -36,7 +36,7 @@ class PlaceListRecyclerAdapter(val context:Context, val places:ArrayList<Place>)
         val place : Place = places.get(position)
         holder.tvAddress.text = place.address_name
         holder.tvPlaceName.text = place.place_name
-        holder.tvDistance.text = place.distance
+        holder.tvDistance.text = place.distance + "m"
     }
 
     override fun getItemCount(): Int {

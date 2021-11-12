@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
@@ -11,7 +11,7 @@
         android:layout_height="40dp"
         android:src="@drawable/ic_baseline_wc_24"
         android:background="@drawable/bg_choice_select"
-        app:tint="@color/black"
+        app:tint="@color/teal_700"
         android:padding="4dp"
         android:layout_margin="8dp"
         android:onClick="clickChoice"/>
@@ -22,7 +22,7 @@
         android:layout_height="40dp"
         android:src="@drawable/ic_baseline_theaters_24"
         android:background="@drawable/bg_choice"
-        app:tint="@color/black"
+        app:tint="@color/teal_700"
         android:padding="4dp"
         android:layout_margin="8dp"
         android:onClick="clickChoice"/>
@@ -33,7 +33,7 @@
         android:layout_height="40dp"
         android:src="@drawable/ic_baseline_local_gas_station_24"
         android:background="@drawable/bg_choice"
-        app:tint="@color/black"
+        app:tint="@color/teal_700"
         android:padding="4dp"
         android:layout_margin="8dp"
         android:onClick="clickChoice"/>
@@ -44,62 +44,7 @@
         android:layout_height="40dp"
         android:src="@drawable/ic_baseline_ev_station_24"
         android:background="@drawable/bg_choice"
-        app:tint="@color/black"
-        android:padding="4dp"
-        android:layout_margin="8dp"
-        android:onClick="clickChoice"/>
-
-    <ImageView
-        android:id="@+id/choice_01"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_ev_station_24"
-        android:background="@drawable/bg_choice"
-        app:tint="@color/black"
-        android:padding="4dp"
-        android:layout_margin="8dp"
-        android:onClick="clickChoice"/>
-
-    <ImageView
-        android:id="@+id/choice_02"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_ev_station_24"
-        android:background="@drawable/bg_choice"
-        app:tint="@color/black"
-        android:padding="4dp"
-        android:layout_margin="8dp"
-        android:onClick="clickChoice"/>
-
-    <ImageView
-        android:id="@+id/choice_03"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_ev_station_24"
-        android:background="@drawable/bg_choice"
-        app:tint="@color/black"
-        android:padding="4dp"
-        android:layout_margin="8dp"
-        android:onClick="clickChoice"/>
-
-    <ImageView
-        android:id="@+id/choice_04"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_ev_station_24"
-        android:background="@drawable/bg_choice"
-        app:tint="@color/black"
-        android:padding="4dp"
-        android:layout_margin="8dp"
-        android:onClick="clickChoice"/>
-
-    <ImageView
-        android:id="@+id/choice_05"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_ev_station_24"
-        android:background="@drawable/bg_choice"
-        app:tint="@color/black"
+        app:tint="@color/teal_700"
         android:padding="4dp"
         android:layout_margin="8dp"
         android:onClick="clickChoice"/>

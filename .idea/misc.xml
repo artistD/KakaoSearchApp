@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/ic_baseline_theaters_24.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/splash.xml" value="0.1925925925925926" />
+        <entry key="app/src/main/res/drawable/bg_search_et.xml" value="0.2677083333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/activity_place_url.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/choice_list.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/fragment_searchlist.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/fragment_searchmap.xml" value="0.25104166666666666" />
+        <entry key="app/src/main/res/layout/recycler_item_list_fragment.xml" value="0.25104166666666666" />
       </map>
     </option>
   </component>

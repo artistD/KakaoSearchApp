@@ -16,10 +16,10 @@
            android:id="@+id/tv_place_name"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="성동구청 개방 화장실"
            android:padding="4dp"
+           android:text="성동구청 개방 화장실"
            android:textColor="@color/black"
-           android:textStyle="bold"/>
+           android:textStyle="bold" />
 
        <TextView
            android:id="@+id/tv_address"
@@ -37,7 +37,7 @@
            android:layout_alignParentRight="true"
            android:textStyle="bold"
            android:padding="4dp"
-           android:textColor="@color/purple_500"/>
+           android:textColor="@color/teal_700"/>
 
    </RelativeLayout>
 
