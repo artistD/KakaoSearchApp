@@ -9,11 +9,10 @@ import android.os.Bundle
 import android.os.Looper
 import android.view.Menu
 import android.view.View
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
+import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.*
 import com.google.android.material.tabs.TabLayout
@@ -47,10 +46,19 @@ class MainActivity : AppCompatActivity() {
     public var searchLocalApiResponse : SearchLocalApiResponse? = null
     
     val etSearch:EditText by lazy { findViewById(R.id.et_search) }
+
+
+
+    //progressbar 제어
+    val blur : RelativeLayout by lazy { findViewById(R.id.blur) }
+    val pg : ProgressBar by lazy { findViewById(R.id.pg) }
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        pg.visibility = View.VISIBLE
+        blur.visibility = View.VISIBLE
         
         //소프트키패드의 검색버튼(액션버튼) 눌렀을때
         etSearch.setOnEditorActionListener { v, actionId, event ->
@@ -141,9 +149,7 @@ class MainActivity : AppCompatActivity() {
             
             //위치결과 객체로 부터 내위치 정보 얻기
             myLocation = p0.lastLocation
-            
-            Toast.makeText(this@MainActivity, "" + myLocation.latitude, Toast.LENGTH_SHORT).show()
-            
+
             //위치 얻어왔으면 더이상 업데이트 하지마세요
             locationProviderClient.removeLocationUpdates(this)
             
@@ -155,6 +161,7 @@ class MainActivity : AppCompatActivity() {
     
     //카카오 키워드 local검색 API 호출 기능 메소드
     val searchPlace:()->Unit = {
+
         //retrofit 역할 inputstream, outputstream, thread, onui... try catch이런것들 레트로핏이 다해버림 : 서버의 작업을 다해줌
         val baseUrl: String = "https://dapi.kakao.com/"
         val builder : Retrofit.Builder = Retrofit.Builder()
@@ -178,6 +185,9 @@ class MainActivity : AppCompatActivity() {
 
                 tabLayout.getTabAt(0)?.select()
 
+                pg.visibility = View.INVISIBLE
+                blur.visibility = View.INVISIBLE
+
             }
 
             override fun onFailure(call: Call<SearchLocalApiResponse>, t: Throwable) {
@@ -196,16 +206,32 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("ResourceAsColor")
     fun clickChoice(view: View) {
-        findViewById<ImageView>(choiceID).setBackgroundResource(R.drawable.bg_choice)
+
+        findViewById<CardView>(choiceID).setBackgroundResource(R.drawable.bg_choice)
         view.setBackgroundResource(R.drawable.bg_choice_select)
         choiceID = view.id
 
+        val llchoiceWv : LinearLayout = findViewById(R.id.ll_chice_wv)
+        var isMvCheched =false
+
         when(choiceID){
-            R.id.choice_wv -> searchQuery = "화장실"
+            R.id.choice_wv -> {
+                searchQuery = "화장실"
+                isMvCheched = true
+            }
             R.id.choice_movie -> searchQuery = "영화관"
             R.id.choice_gas -> searchQuery = "주유소"
-            R.id.choice_ev -> searchQuery = "전기"
+            R.id.chice_ev -> searchQuery = "전기"
+        }
+
+        if (isMvCheched){
+            llchoiceWv.setBackgroundResource(R.drawable.bg_choice_select)
+            isMvCheched =false
+        }else{
+            llchoiceWv.setBackgroundResource(R.drawable.bg_choice)
+            isMvCheched =false
         }
 
         searchPlace()

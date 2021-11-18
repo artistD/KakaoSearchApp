@@ -59,7 +59,7 @@ class SearchMapFragment : Fragment() {
                 val position :LatLng = LatLng(latitude, longitude)
 
                 //마커옵션 객체를 통해 마커의 설정들
-                val markerOptions:MarkerOptions = MarkerOptions().position(position).title(place.place_name).snippet(place.distance + "m").icon(BitmapDescriptorFactory.defaultMarker(165F))
+                val markerOptions:MarkerOptions = MarkerOptions().position(position).title(place.place_name).snippet(place.distance + "m").icon(BitmapDescriptorFactory.defaultMarker(190F))
                 it.addMarker(markerOptions)?.tag = place.place_url
                 
             }

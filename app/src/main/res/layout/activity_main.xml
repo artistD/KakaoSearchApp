@@ -12,11 +12,10 @@
         android:layout_height="?attr/actionBarSize">
 
         <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginRight="8dp"
-            android:src="@drawable/ic_logo"
-            app:tint="@color/teal_700" />
+            android:src="@mipmap/ic_dmojang_final_logo"/>
 
         <EditText
             android:id="@+id/et_search"
@@ -54,8 +53,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/scrollview"
-        app:tabIndicatorColor="@color/teal_700"
-        app:tabSelectedTextColor="@color/teal_700"
+        app:tabIndicatorColor="@color/aqua"
+        app:tabSelectedTextColor="@color/aqua"
         app:tabTextColor="#FFAAAAAA">
 
         <com.google.android.material.tabs.TabItem
@@ -77,5 +76,22 @@
         android:layout_height="match_parent"
         android:layout_below="@id/layout_tab"
         android:layout_marginTop="8dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55333333"
+        android:clickable="true"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:id="@+id/pg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:indeterminateTint="@color/aqua"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
 
 </RelativeLayout>

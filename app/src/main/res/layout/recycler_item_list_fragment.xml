@@ -37,7 +37,7 @@
            android:layout_alignParentRight="true"
            android:textStyle="bold"
            android:padding="4dp"
-           android:textColor="@color/teal_700"/>
+           android:textColor="@color/aqua"/>
 
    </RelativeLayout>
 
