@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.kakao.sdk.auth.model.Prompt
 import com.kakao.sdk.common.util.Utility
 import com.kakao.sdk.user.UserApiClient
@@ -31,11 +32,14 @@ class LoginActivity : AppCompatActivity() {
 
     fun clickSignUp(view: View) {
         //회원가입 화면(액티비티)로 이동
+        startActivity(Intent(this, SignUpActivity::class.java))
 
     }
 
     fun clickLoginEmail(view: View) {
-        //이메일 로그인 화면(액티비티)로 이돛
+        //이메일 로그인 화면(액티비티)로 이동
+        startActivity(Intent(this, EmailSignInActivity::class.java))
+
 
     }
 
@@ -73,10 +77,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun clickLoginGoogle(view: View) {
-
+        //***구글로그인 알아서 혼자 해봐
+        AlertDialog.Builder(this).setMessage("죄송합니다. 구글 서버문제로 로그인 기능이 불가합니다. 다른 로그인방식을 선택해 주시기 바랍니다.").show()
     }
 
     fun clickLoginNaver(view: View) {
+        //어것도 혼자해봐....................
+        AlertDialog.Builder(this).setMessage("죄송합니다. 네이버 서버문제로 로그인 기능이 불가합니다. 다른 로그인방식을 선택해 주시기 바랍니다.").show()
 
     }
 

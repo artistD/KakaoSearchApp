@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "71652498978",
+    "project_id": "dmojang-56d4f",
+    "storage_bucket": "dmojang-56d4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71652498978:android:c1a0158b13d459dcf3747b",
+        "android_client_info": {
+          "package_name": "com.will_d.tp11kakaoplacesearchapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71652498978-rqqkd1haugsusfug1a50nf13arrk4u3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDna5nN-9JZ2rOgu4zBgHd85Gt8_OSTUhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71652498978-rqqkd1haugsusfug1a50nf13arrk4u3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,6 +7,7 @@ import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
+import android.provider.Settings
 import android.view.Menu
 import android.view.View
 import android.widget.*
@@ -215,6 +216,14 @@ class MainActivity : AppCompatActivity() {
 
         val llchoiceWv : LinearLayout = findViewById(R.id.ll_chice_wv)
         var isMvCheched =false
+
+        if (G.user == null){//로그인을 안하면.......
+            if (choiceID !=R.id.choice_wv && choiceID!=R.id.choice_movie){
+                AlertDialog.Builder(this).setMessage("로그인을 해야 이용가능합니다.").show()
+                return
+            }
+
+        }
 
         when(choiceID){
             R.id.choice_wv -> {
